@@ -1,0 +1,50 @@
+Mortgage Program:
+-----------------
+import java.lang.reflect.Array;
+import java.text.NumberFormat;
+import java.util.Arrays;
+import java.util.Date;
+import java.util.Scanner;
+
+public class HelloWorld {
+    public static void main(String[] args){
+        final byte MONTHS_IN_YEARS=12;
+        final byte PERCENT=100;
+
+        Scanner scanner=new Scanner(System.in);
+        System.out.print("Principal:");
+        int principal=scanner.nextInt();
+
+        System.out.print("Annual Interest:");
+        float annualInterest=scanner.nextFloat();
+        float monthlyInterst=annualInterest/PERCENT/MONTHS_IN_YEARS;
+
+        System.out.print("Period of (Years):");
+        byte years=scanner.nextByte();
+        int numberOfPayments=years*MONTHS_IN_YEARS;
+
+        double mortgage=principal*(monthlyInterst*Math.pow(1+monthlyInterst,numberOfPayments))/(Math.pow(1+monthlyInterst,numberOfPayments)-1);
+
+        String mortgageFormatted= NumberFormat.getInstance().format(mortgage);
+        System.out.println("Mortgage: "+mortgageFormatted);
+    }
+}
+//output:
+Principal:10000
+Annual Interest:5
+Period of (Years):1
+Mortgage: 856.064
+============================================================================================================================================================================
+
+
+
+
+
+
+
+
+
+
+
+
+
