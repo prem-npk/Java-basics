@@ -35,7 +35,31 @@ Annual Interest:5
 Period of (Years):1
 Mortgage: 856.064
 ============================================================================================================================================================================
+Create a random string:
+----------------------
+import java.util.Random;
 
+class RandomString{
+    public String generateString(int num){
+        StringBuffer sb=new StringBuffer();
+        Random random=new Random();
+        for(int i=0;i<num;i++){
+            char randomchar=(char)(97+random.nextInt(26));
+            sb.append(randomchar);
+        }
+        return sb.toString();
+    }
+    
+    public static void main(String[] args){
+        int n=10;
+        RandomString rs=new RandomString();
+        String str=rs.generateString(n);
+        System.out.println(str);
+    }
+}
+//output:
+dmopuyucoy
+============================================================================================================================================================================
 
 
 
