@@ -59,6 +59,17 @@ class RandomString{
 }
 //output:
 dmopuyucoy
+
+Explanation:
+------------
+1. StringBuffer is mutable, which means it allows modifications to the existing object without creating a new one for the same variable. It is designed to be thread-safe, allowing multiple threads to handle it simultaneously without causing data inconsistencies.
+
+2. StringBuilder is also mutable, but unlike StringBuffer, it is not thread-safe. Therefore, it is not suitable for concurrent operations from multiple threads simultaneously. StringBuilder is more efficient than StringBuffer in single-threaded scenarios.
+
+So, to summarize:
+
+- StringBuffer: Mutable and thread-safe (suitable for multi-threaded scenarios).
+- StringBuilder: Mutable but not thread-safe (more efficient in single-threaded scenarios).
 ============================================================================================================================================================================
 
 
